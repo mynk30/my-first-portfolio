@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    background-color: #0E2954;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    width: 100vw;
+
+}
+
+.nav-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-flex>li {
+    margin: 0.5rem 0rem;
+}
+
+@media(max-width:1200px) {
+    .nav-flex {
+        gap: 1.5rem;
+        row-gap: 0rem;
+    }
+
+    .nav-container {
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media(max-width: 500px) {
+    .nav-flex {
+        justify-content: left;
+        align-items: center;
+    }
+}
+
+.nav-item {
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.2rem;
+    position: relative;
+    left: 0;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+.nav-item:hover,
+.nav-item:focus {
+    color: #fff;
+}
+
+.nav-item::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: rgb(23, 177, 219);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+    opacity: 1;
+}
+
+.main-hero {
+
+    background: #5f2c82;
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+    background: linear-gradient(to right, #49a09d, #5f2c82);
+
+    /* background: url('/images/hero-banner.jpg'); */
+
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.main-hero::before {
+    content: '';
+    background-image: url('/images/hero-banner.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.75;
+}
+
+.main-hero h1 {
+    position: relative;
+    color: white;
+    font-family: 'Sacramento', cursive;
+    font-size: 8rem;
+    text-align: center;
+}
+
+.main-hero h2 {
+    position: relative;
+    font-family: 'Martian Mono', monospace;
+    color: black;
+}
+
+.main-hero span {
+    text-decoration: underline;
+}
+
+@media(max-width: 700px) {
+    .main-hero h1 {
+        font-size: 6rem;
+    }
+
+}
+
+.about-section {
+    height: auto;
+    background-color: #dfe2eae8;
+}
+
+.profile-container {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem 0rem;
+}
+
+.profile-container h1 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.profile-container img {
+    height: 15rem;
+    width: 13rem;
+    border-radius: 50%;
+}
+
+.about-section p {
+    width: 50%;
+    margin: auto auto;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom: 1rem;
+}
+
+@media(max-width:800px) {
+    .profile-container {
+        gap: 1rem;
+    }
+
+    .about-section p {
+        width: 80%;
+    }
+}
+
+.work-section {
+    height: auto;
+    background: #283048;
+    background: -webkit-linear-gradient(to right, #859398, #283048);
+    background: linear-gradient(to right, #859398, #283048);
+    width: 100%;
+
+    color: white;
+}
+
+.work-section h1 {
+    text-align: center;
+    padding: 1rem 0rem;
+    font-size: 3rem;
+}
+
+.work-item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    row-gap: 1.25rem;
+}
+
+.work-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-item a {
+    margin: 1rem;
+}
+
+.work-item a img {
+    width: 300px;
+    height: 190px;
+    object-fit: cover;
+    padding: 1rem;
+    border: 0.25rem dashed white;
+    border-radius: 0.25rem;
+}
+
+
+.work-item h2 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 450;
+    margin: 0rem 0rem 1.5rem 0rem;
+    letter-spacing: 2px;
+    text-underline-offset: 7px;
+}
+
+.work-item p {
+    font-family: 'Ubuntu', sans-serif;
+    width: 75%;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+  
+
+@media (max-width: 1200px) {
+    .work-item-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .work-item {
+        margin-bottom: 1rem;
+    }
+
+    .work-item a {
+        margin: 0rem 0.5rem;
+    }
+
+    .work-item h2 {
+        margin: 0.5rem 0rem;
+    }
+
+    
+}
+
+@media (max-width: 800px) {
+    .work-item p {
+        width: 90%;
+    }
+}
+
+.contact-section {
+    height: auto;
+    background-image: url('../images/contact-banner.jpg');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.contact-section h1 {
+    font-family: "Libre Baskerville", serif;
+    padding: 2rem 0rem 1rem 2rem;
+    /* text-decoration: underline; */
+    letter-spacing: 0.05em;
+    color: white;
+}
+
+.contact-section p {
+    font-family: "Montserrat", sans-serif;
+    padding: 0rem 2rem;
+    padding-bottom: 2rem;
+    color: #b2b5be;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 800px) {
+    .contact-section h1 {
+        font-size: 1.5rem;
+        padding: 1rem 0rem;
+        padding-left: 2rem;
+    }
+
+    .contact-section p {
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+}
+
+.email-section {
+    background-color: rgb(52, 53, 62);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.email-section h1 {
+    padding: 2rem 0rem 1rem 2rem;
+    color: #fff;
+}
+
+.email-section p {
+    font-family: "Montserrat", sans-serif;
+    padding: 0rem 2rem;
+    padding-bottom: 2rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 800px) {
+    .email-section h1 {
+        padding: 1rem 0rem;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .email-section p {
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+footer {
+    background-color: #0E2954;
+    height: max-content;
+    color: white;
+}
+
+footer p {
+    text-align: center;
+    padding: 1vh 0vh;
+    font-size: 1.10rem;
+}
+
+@media (max-width: 800px) {
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    *:not(.nav-container *) {
+        overflow-x: hidden;
+    }
+}
