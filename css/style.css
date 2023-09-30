@@ -85,7 +85,7 @@
     background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
     background: linear-gradient(to right, #49a09d, #5f2c82);
 
-    /* background: url('/images/hero-banner.jpg'); */
+    background: url('/images/hero-banner.jpg'); 
 
     position: relative;
     left: 0;
