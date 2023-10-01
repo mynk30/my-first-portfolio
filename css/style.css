@@ -100,7 +100,7 @@
 
 .main-hero::before {
     content: '';
-    background-image: url('/images/hero-banner.jpg');
+    background-image: url('../images/hero-banner.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
